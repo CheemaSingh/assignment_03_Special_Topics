@@ -33,6 +33,8 @@ provider:
         - dynamodb:Scan
         - dynamodb:GetItem
         - dynamodb:PutItem
+        - dynamodb:UpdateItem
+        - dynamodb:DeleteItem
       Resource: "*"
 # you can overwrite defaults here
 #  stage: dev
@@ -92,6 +94,13 @@ functions:
       - http:
           path: todolist/{id}
           method: get
+
+  deleteToDoListItem:
+    handler: api/todolist_deleteitem.delete
+    events:
+      - http:
+          path: todolist/{id}
+          method: delete
 
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events

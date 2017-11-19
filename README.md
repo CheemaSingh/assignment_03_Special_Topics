@@ -1,7 +1,7 @@
 # assignment_03_Special_Topics
 Serverless and dynamoDB 
 
-### An To-Do List Api
+### A simple To-Do List Api
 
 ## Dont forget to include bluebird module, otherwise it will give errors
 
